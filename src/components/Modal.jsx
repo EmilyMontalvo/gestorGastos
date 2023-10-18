@@ -48,7 +48,7 @@ const handleSubmit = e => {
             </div>
             <div className="campo">
                 <label htmlFor="categoria">Categoria</label>
-                <select name="" id="categoria" > value={categoria} onChange={e=> setCategoria(e.target.value)}
+                <select name="" id="categoria" value={categoria} onChange={e=>setCategoria(e.target.value)} > 
                     <option value="">--Seleccione--</option>
                     <option value="ahorro">Ahorro</option>
                     <option value="comida">Comida</option>
@@ -60,7 +60,7 @@ const handleSubmit = e => {
                 </select>
                 
             </div>
-            <input type="submit" value="Añadir Gasto" />
+            <input type="submit" value="Añadir Gasto"/>
 
 
 
