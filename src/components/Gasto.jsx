@@ -28,11 +28,11 @@ const diccionarioIconos = {
 
 }
 
-const Gasto = ({ gasto }) => {
+const Gasto = ({ gasto, gastoEditar, setGastoEditar }) => {
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction onClick={() => console.info('Editar...')}>
+      <SwipeAction onClick={() => setGastoEditar(gasto)}>
         Editar
       </SwipeAction>
     </LeadingActions>
