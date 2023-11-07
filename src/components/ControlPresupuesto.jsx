@@ -37,16 +37,16 @@ const ControlPresupuesto = ({presupuesto, gastos}) => {
         value={porcentaje} 
         text={`${porcentaje}% Gastado`}
         styles={buildStyles({
-            pathColor : "#3b82f6",
+            pathColor : porcentaje>100?"#dc2626":"#3b82f6",
             trailColor : "#f5f5f5",
-            textColor :"#3b82f6"
+            textColor :porcentaje>100?"#dc2626":"#3b82f6",
         })}
         />;
 
         </div>
         <div className="contenido-presupuesto">
             <p> <span>Presupuesto:</span> {formatearCantidad(presupuesto)} </p>
-            <p> <span>Disponible:</span> {formatearCantidad(disponible)} </p>
+            <p className={`${disponible< 0 ?"negativo":""}`}> <span>Disponible:</span> {formatearCantidad(disponible)} </p>
             <p> <span>Gastado:</span> {formatearCantidad(gastado)} </p>
         </div>
       
