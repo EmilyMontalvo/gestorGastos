@@ -8,7 +8,9 @@ const Modal = ({
     animarModal, 
     setAnimarModal, 
     guardarGasto, 
-    gastoEditar}) => {
+    gastoEditar,
+    setGastoEditar
+}) => {
 
 const [nombre, setNombre] = useState("")
 const [cantidad, setCantidad] = useState(0)
@@ -30,6 +32,7 @@ useEffect(()=>{
 const ocultarModal = () => {
     
     setAnimarModal(false)
+    setGastoEditar({})
     
     setTimeout(()=>{setModal(false)},500)
 }
@@ -42,6 +45,7 @@ const handleSubmit = e => {
     }
 
     guardarGasto({nombre, cantidad, categoria, id, fecha})
+    
 }
 
 
